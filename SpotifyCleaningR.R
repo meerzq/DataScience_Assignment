@@ -22,7 +22,7 @@ spotify_engineered <- spotify_cleaned %>%
 # 5. Remove Irrelevant Columns
 # We explicitly remove 'key' and 'track_id'
 spotify_prepared <- spotify_engineered %>%
-  select(-track_id, -key)
+  select(-key)
 
 # 6. Normalize function
 normalize <- function(x) {
