@@ -20,7 +20,7 @@ spotify_engineered <- spotify_cleaned %>%
              remove_selected_columns = TRUE)
 
 # 5. Remove Irrelevant Columns
-# We explicitly remove 'key' and 'track_id'
+# We explicitly remove 'key'
 spotify_prepared <- spotify_engineered %>%
   select(-key)
 
