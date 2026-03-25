@@ -8,7 +8,7 @@ spotify_data <- read.csv("SpotifyFeatures.csv", stringsAsFactors = FALSE)
 spotify_cleaned <- spotify_data %>%
   drop_na(popularity, acousticness, danceability, energy, instrumentalness, 
           liveness, loudness, speechiness, tempo, valence, mode, genre) %>%
-  distinct()
+  distinct(track_name, artist_name, .keep_all = TRUE)
 
 # 4. Feature Engineering
 # Convert 'mode' to binary
